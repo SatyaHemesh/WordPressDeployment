@@ -1,0 +1,17 @@
+# Ignore Terraform files
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# Ignore MySQL runtime/data
+mysql_data/
+*.sock
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Optional: ignore Terraform executable if present
+terraform.exe
+terraform_1.9.5_windows_amd64/
