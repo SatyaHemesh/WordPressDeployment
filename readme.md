@@ -18,7 +18,7 @@ This project automates the deployment of a **WordPress** site with a **MySQL dat
 
 ```
 
-wordpress-terraform-docker/
+WordPressDeployment/
 │── main.tf               # Main Terraform configuration
 │── variables.tf          # Variables used in Terraform
 │── terraform.tfvars      # Variable values
@@ -113,3 +113,4 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 #
+
