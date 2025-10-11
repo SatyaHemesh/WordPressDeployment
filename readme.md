@@ -6,37 +6,34 @@ This project automates the deployment of a **WordPress** site with a **MySQL dat
 
 ## 📌 Overview
 
-- **Terraform** for Infrastructure as Code (IaC)
-- **Docker** for containerized deployment
-- **Automated provisioning** of WordPress + MySQL
-- **Persistent storage** for MySQL data
-- Simple, reproducible setup
+- **Terraform** for Infrastructure as Code (IaC)  
+- **Docker** for containerized deployment  
+- **Automated provisioning** of WordPress + MySQL  
+- **Persistent storage** for MySQL data  
+- Simple, reproducible setup  
 
 ---
 
 ## 📂 Project Structure
 
-```
-
 WordPressDeployment/
-│── main.tf               # Main Terraform configuration
-│── variables.tf          # Variables used in Terraform
-│── terraform.tfvars      # Variable values
-│── outputs.tf            # Terraform outputs
-│── .terraform.lock.hcl   # Provider lock file
-│── mysql\_data/           # MySQL persistent storage
-│── terraform.exe         # Terraform binary (Windows)
-
-````
+├── main.tf # Main Terraform configuration
+├── variables.tf # Variables used in Terraform
+├── terraform.tfvars # Variable values
+├── outputs.tf # Terraform outputs
+├── .terraform.lock.hcl # Provider lock file
+├── mysql_data/ # MySQL persistent storage
+└── terraform.exe # Terraform binary (Windows)
 
 ---
 
 ## 🛠 Requirements
 
 Before starting, ensure you have:
-- [Docker](https://docs.docker.com/get-docker/) installed and running
-- [Terraform](https://developer.hashicorp.com/terraform/downloads) installed (latest version recommended)
-- Internet connection to pull Docker images
+
+- [Docker](https://docs.docker.com/get-docker/) installed and running  
+- [Terraform](https://developer.hashicorp.com/terraform/downloads) installed (latest version recommended)  
+- Internet connection to pull Docker images  
 
 ---
 
@@ -45,67 +42,47 @@ Before starting, ensure you have:
 ### 1️⃣ Initialize Terraform
 ```powershell
 .\terraform.exe init
-````
-
 Initializes the Terraform working directory and downloads required providers.
 
-### 2️⃣ View the Execution Plan
-
-```powershell
+2️⃣ View the Execution Plan
+powershell
+Copy code
 .\terraform.exe plan
-```
-
 Shows what resources Terraform will create or modify.
 
-### 3️⃣ Deploy the Containers
-
-```powershell
+3️⃣ Deploy the Containers
+powershell
+Copy code
 .\terraform.exe apply
-```
+Confirm with yes when prompted.
 
-Confirm with `yes` when prompted.
-
-### 4️⃣ Access WordPress
-
+4️⃣ Access WordPress
 Once deployed, open:
-
-```
 http://localhost:8080
-```
+📜 Commands Used
+Command	Description
+terraform init	Initializes Terraform configuration
+terraform plan	Previews changes before applying
+terraform apply	Creates or updates infrastructure
+terraform destroy	Removes created infrastructure
 
----
+📦 Resources Created
+Docker Network for container communication
 
-## 📜 Commands Used
+MySQL Container (database backend for WordPress)
 
-| Command             | Description                         |
-| ------------------- | ----------------------------------- |
-| `terraform init`    | Initializes Terraform configuration |
-| `terraform plan`    | Previews changes before applying    |
-| `terraform apply`   | Creates or updates infrastructure   |
-| `terraform destroy` | Removes created infrastructure      |
+WordPress Container (CMS platform)
 
----
+Persistent Volume for MySQL data
 
-## 📦 Resources Created
+🔮 Future Improvements
+Add SSL support with Let's Encrypt
 
-* **Docker Network** for container communication
-* **MySQL Container** (database backend for WordPress)
-* **WordPress Container** (CMS platform)
-* **Persistent Volume** for MySQL data
+Deploy to AWS/GCP/Azure using Terraform cloud providers
 
----
+Add automated MySQL backups
 
-## 🔮 Future Improvements
+Configure Docker Compose alternative
 
-* Add SSL support with Let's Encrypt
-* Deploy to AWS/GCP/Azure using Terraform cloud providers
-* Add automated MySQL backups
-* Configure Docker Compose alternative
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
-
-
+📄 License
+This project is licensed under the MIT License.
