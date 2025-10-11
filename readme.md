@@ -40,33 +40,30 @@ Before starting, ensure you have:
 ## ⚙️ Setup & Usage
 
 ### 1️⃣ Initialize Terraform
-```powershell
+
 .\terraform.exe init
 Initializes the Terraform working directory and downloads required providers.
 
-2️⃣ View the Execution Plan
-powershell
-Copy code
+###2️⃣ View the Execution Plan
 .\terraform.exe plan
 Shows what resources Terraform will create or modify.
 
-3️⃣ Deploy the Containers
-powershell
-Copy code
+###3️⃣ Deploy the Containers
 .\terraform.exe apply
 Confirm with yes when prompted.
 
-4️⃣ Access WordPress
+###4️⃣ Access WordPress
 Once deployed, open:
 http://localhost:8080
-📜 Commands Used
+
+###📜 Commands Used
 Command	Description
 terraform init	Initializes Terraform configuration
 terraform plan	Previews changes before applying
 terraform apply	Creates or updates infrastructure
 terraform destroy	Removes created infrastructure
 
-📦 Resources Created
+###📦 Resources Created
 Docker Network for container communication
 
 MySQL Container (database backend for WordPress)
@@ -85,4 +82,5 @@ Add automated MySQL backups
 Configure Docker Compose alternative
 
 📄 License
+
 This project is licensed under the MIT License.
