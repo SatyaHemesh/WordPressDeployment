@@ -1,5 +1,3 @@
----
-
 # 🚀 WordPress Deployment with Terraform & Docker
 
 This project automates the deployment of a WordPress site with a MySQL database using **Terraform** and the **Docker provider**. It provisions Docker containers, networks, and volumes required to run WordPress locally or on a server.
@@ -105,3 +103,4 @@ Once deployed, open your browser and visit:
 This project is licensed under the **MIT License**.
 
 ---
+
