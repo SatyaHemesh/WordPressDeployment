@@ -15,4 +15,4 @@ ENV WORDPRESS_DB_NAME=wordpress_db
 EXPOSE 80
 
 # Run Apache in the foreground (default command in official image)
-CMD ["apache2-foreground"]
+CMD ["apache2-foreground"] 
